@@ -1,0 +1,6 @@
+Django==1.7
+django-crispy-forms==1.4.0
+django-jsonview==0.4.3
+requests==2.5.1
+python-dateutil==2.4.0
+jsonfield==1.0.0

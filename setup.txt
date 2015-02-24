@@ -1,0 +1,399 @@
+This django web application is deployed using Gunicorn + NGINX in a virtual python environment. What are NGINX and Gunicorn?
+(from http://stackoverflow.com/questions/13182892/what-is-the-purpose-of-nginx-and-gunicorn-running-in-parallel)
+
+"NGinx is a reverse proxy. It's first in line. It accepts incoming connections and decides where they should go next. It also serves static media such as CSS, JS and images. Gunicorn is the next layer and is an application server. Nginx sees that the incoming connection is for www.domain.com and knows (via configs) that it should pass that connection onto Gunicorn. Gunicorn is a WSGI server which is basically a simple and universal interface between web servers and web applications or frameworks Gunicorns job is to manage and run the django instance(s)"
+
+And virtual python environments (from http://docs.python-guide.org/en/latest/dev/virtualenvs/):
+
+"A Virtual Environment is a tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them. It solves the “Project X depends on version 1.x but, Project Y needs 4.x” dilemma, and keeps your global site-packages directory clean and manageable." 
+
+We use virtual environments to assure that everything required to run the web app is contained within the local directory (and therefore pushed to the repo). For those just wanting to deploy on their machine, all this means is they must remember to "activate" the virtual environment before running gunicorn (more on this later). 
+
+Directory structure:
+####################
+.
+├── README.txt
+├── bin					 		
+├── chgvis						
+├── db.sqlite3  		        
+├── gunicorn_access_log.txt     
+├── gunicorn_cfg.py   
+├── include 
+├── lib 
+├── manage.py 
+├── pip-selfcheck.json 
+├── requirements 
+├── share 
+├── staticfiles 
+├── templates 
+└── vis 
+####################
+
+
+////////////////////////////////////////////////
+///////////////////  Overview  /////////////////
+////////////////////////////////////////////////
+
+We are going to perform the following step to deploy on your mac OS Yosemite (tested: 10.10.2):
+
+Installations:
+1. Install some system wide software 
+	-Homebrew package manager
+		-allows for easy installation of OSx software
+	-Pip
+		-Python package manager
+2. Using homebrew and pip, install packages needed for chgvis webapp
+	-nginx
+	-pip install
+3. Test to make sure all software is installed
+
+Configuration:
+4. Make ssl keys
+5. Configure NGINX (tricky step)
+6. Deploy
+
+
+///////////////////////////////////////////////////
+/////////////////// Installations /////////////////
+///////////////////////////////////////////////////
+
+
+Step 1. Install system wide software
+=================================================================
+=================================================================
+
+
+-Install "Homebrew Package Manager". Awesome tool that allows makes installing/removing software easy. More info here: http://brew.sh/
+
+	In terminal, enter: 
+	(If any errors occur, rerun command with sudo)
+
+	---------------------------------------------
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	---------------------------------------------
+
+	Brew should now be installed. Check for any conflicts or problems by entering:
+	---------------------------------------------
+	brew doctor 
+	---------------------------------------------
+
+	and to be safe, update and upgrade Homebrew formulas:
+	---------------------------------------------
+	brew update && brew upgrade
+	---------------------------------------------
+
+-Install Pip, a python package manager
+
+	---------------------------------------------
+	sudo easy_install pip
+	---------------------------------------------
+
+	check pip is installed with
+
+	---------------------------------------------
+	pip -h
+	---------------------------------------------
+	to see the help menu
+
+
+2. Using homebrew and pip, install packages needed for chgvis webapp
+=================================================================
+=================================================================
+
+-Install nginx
+
+	---------------------------------------------
+	brew install nginx
+	---------------------------------------------
+
+	Test nginx by turning it on:
+	---------------------------------------------
+	sudo nginx
+	---------------------------------------------
+
+	And going to http://localhost:8080. You should see the nginx welcome page.
+
+	Turn nginx off for now, 
+	---------------------------------------------
+	sudo nginx -s stop
+	---------------------------------------------
+
+-Install python packages
+	
+	CD to project directory
+
+	---------------------------------------------
+	cd /path/to/deploy
+	---------------------------------------------
+	You should be in the same directory as the directory structure on line 12 of this readme. Then activate the virtual environment (we do this so the python packages we're about to install install locally to this python environment rather than globally)
+
+	---------------------------------------------
+	source bin/activate
+	---------------------------------------------
+
+	Then use pip to install all the requirements contained in the requirements/production.txt file
+
+	---------------------------------------------
+	pip install -r requirements/production.txt 
+	---------------------------------------------
+
+3. Test to make sure all software is installed
+=================================================================
+=================================================================
+
+	Let's test to make sure everything is installed correctly. We'll run a local webserver using gunicorn. Make sure you're still in the same directory (with the gunicorn config file: gunicorn_cfg.py) and run: 
+
+	---------------------------------------------
+	gunicorn chgvis.wsgi:application -c gunicorn_cfg.py
+	---------------------------------------------
+
+	You should see the following output:
+
+	---------output-----------
+	[2015-02-19 11:01:39 -0800] [94760] [INFO] Starting gunicorn 19.2.0
+	[2015-02-19 11:01:39 -0800] [94760] [INFO] Listening at: http://127.0.0.1:8001 (94760)
+	[2015-02-19 11:01:39 -0800] [94760] [INFO] Using worker: sync
+	[2015-02-19 11:01:39 -0800] [94764] [INFO] Booting worker with pid: 94764
+
+	Check it's working by going to http://localhost:8001/vis/. Note that gunicorn is hosting the django application but none of the static files (nginx hosts the static files). This means this first screen will look correct but the timeline won't work from this stage.
+
+	Note:
+	Sometimes after running the gunicorn command it will give an error:
+	[2015-02-19 11:00:03 -0800] [94664] [INFO] Starting gunicorn 19.2.0
+	[2015-02-19 11:00:03 -0800] [94664] [ERROR] Connection in use: ('127.0.0.1', 8001)
+	...
+	[2015-02-19 11:00:03 -0800] [94664] [ERROR] Connection in use: ('127.0.0.1', 8001)
+
+	If this is the case, find which processes are running gunicorn and kill them. This is done by:
+
+	---------------------
+	ps -A | grep gunicorn  
+	---------------------
+	and 
+
+	---------------------
+	sudo kill xxxxx   
+	---------------------
+	where xxxxx is the process id number found from the ps -A command.
+
+	Once everything is installed, continue to the configuration step.
+
+///////////////////////////////////////////////////
+/////////////////// Configuration /////////////////
+///////////////////////////////////////////////////
+
+Almost there! At this point we need to:
+ 1) create ssl certificates
+ 2) set up nginx to listen for incoming traffic, verify ssl cert, deploy static files, and reroute to gunicorn.
+ 3) Grant permissions to nginx so it can access static files
+
+
+Step 4. Make self-signed SSL certificate
+=================================================================
+=================================================================
+
+	First make some folders which we'll need. 
+
+	---------------------------------------------
+	mkdir -p /usr/local/etc/nginx/sites-enabled
+	mkdir -p /usr/local/etc/nginx/ssl
+	mkdir -p /usr/local/etc/nginx/log
+
+	(or in one line)
+	mkdir -p /usr/local/etc/nginx/{sites-enabled, ssl, log}
+	---------------------------------------------
+
+	Then cd into folder and make certificate:
+	---------------------------------------------
+	cd /usr/local/etc/nginx/ssl
+	openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout localhost.key -out localhost.crt
+	---------------------------------------------
+
+	You will be prompted to enter information about your organization, as well as the common name, or fully qualified domain name (FQDN). Be sure that this matches the virtual host (set it at "localhost" for now) that you are setting up. 
+
+	You should now have two files,
+	-/usr/local/etc/nginx/ssl/localhost.crt
+	-/usr/local/etc/nginx/ssl/localhost.key
+
+Step 5. Set up the configuration file
+=================================================================
+=================================================================
+
+We're going to make a copy of the original configuration file, and entirely change the contents of the first.
+
+	---------------------------------------------
+	(sudo) cp /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf.default
+	---------------------------------------------
+
+	Now using your favorite text editor, replace the contents of /usr/local/etc/nginx/nginx.conf with below:
+
+	-------------------------------------------------------------
+	/////////////////////////////////////////////////////////////
+	-------------------------------------------------------------
+		user <username> staff;
+
+		worker_processes  1;
+		 
+		error_log  /usr/local/etc/nginx/logs/error.log debug;
+		 
+		events {
+		    worker_connections  1024;
+		}
+		 
+		http {
+		    include             mime.types;
+		    default_type        application/octet-stream;
+		 
+		    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+		                      '$status $body_bytes_sent "$http_referer" '
+		                      '"$http_user_agent" "$http_x_forwarded_for"';
+		 
+		    access_log  /usr/local/etc/nginx/logs/access.log  main;
+		 
+		    sendfile            on;
+		 
+		    keepalive_timeout   65;
+		 
+		    index index.html index.php;
+		 
+		    include /usr/local/etc/nginx/sites-enabled/*; 
+		}
+	-------------------------------------------------------------
+	/////////////////////////////////////////////////////////////
+	-------------------------------------------------------------
+
+		IMPORTANT:
+		- make sure to change <username> in line 1 to your actual username
+		- find your username by entering "whoami" in terminal
+		- example: 
+			user vmasrani staff
+
+	Grant permission to read the logs dir with:
+	
+	---------------------------------------------
+	sudo chmod -R 755 /usr/local/etc/nginx/logs/
+	sudo chmod -R 755 /usr/local/etc/nginx/ssl/
+	sudo chmod -R 755 /usr/local/etc/nginx/sites-enabled/
+	---------------------------------------------
+
+	and test nginx config file using: 
+	----------------
+	sudo nginx -t
+	----------------
+
+	nginx should say everything is okay. If it doesn't, check the username is correct and all permissions for the directories are rwxr-xr-x. 
+
+The last line of the configuration file tells nginx to look in the /nginx/sites-enabled/ directory to for information specific to one site. The last step in the set up is to make a file here which instructs nginx to redirect traffic to gunicorn. 
+
+Make a file in the sites-enabled directory:
+	----------------
+	touch /usr/local/etc/nginx/sites-enabled/chgvis.conf
+	----------------
+and using a text editor, add:
+
+	-------------------------------------------------------------
+	/////////////////////////////////////////////////////////////
+	-------------------------------------------------------------
+		server {
+		    listen 127.0.0.1:8000;
+		    return 301 https://$host$request_uri;
+		}
+
+		server {
+		    listen 443 ssl;
+		    server_name localhost;
+		    access_log  /usr/local/etc/nginx/logs/default-ssl.access.log  main;
+		 
+		    ssl                  on;
+		    ssl_certificate      ssl/localhost.crt;
+		    ssl_certificate_key  ssl/localhost.key;
+		 
+		    ssl_session_timeout  5m;
+		 
+		    ssl_protocols  SSLv2 SSLv3 TLSv1;
+		    ssl_ciphers  HIGH:!aNULL:!MD5;
+		    ssl_prefer_server_ciphers   on;
+
+
+		    location / {
+		      proxy_pass http://127.0.0.1:8001;
+		    }
+
+		    location /static/ {
+		        autoindex on;
+		        alias /path/to/deploy/staticfiles/;
+		    }
+
+		}
+	-------------------------------------------------------------
+	/////////////////////////////////////////////////////////////
+	-------------------------------------------------------------
+	IMPORTANT:
+		-Must change line 323 (alias /path/to/deploy/staticfiles/) to point to the static files directory
+		-Must end with a slash-semicolon (/;) 
+
+
+Nginx will do three things.
+1) Listen on port 8000 and reroute traffic to gunicorn
+	- lines 294 - 297 listen for port 8000
+	- 315 - 317 direct traffic to gunicorn
+2) Verify ssl certificates
+	- Lines 300-313
+3) Serve static files used by django
+	- Lines 319 - 321 point to static files
+	- They are served by nginx, not gunicorn
+
+Finally, we must give permission to allow nginx to serve the static files.
+---------------------------------------------
+sudo chmod -R 755 /path/to/deploy/
+---------------------------------------------
+
+Then start nginx using:
+
+---------------------------------------------
+sudo nginx
+---------------------------------------------
+
+OR if nginx is already running, reload to activate changes
+
+---------------------------------------------
+sudo nginx -s reload
+---------------------------------------------
+
+
+This should complete the setup! The steps to deploy:
+
+1. Activate the virtualenv with
+---------------------------------------------
+source /path/to/deploy/bin/activate
+---------------------------------------------
+
+2. Start gunicorn with:
+---------------------------------------------
+gunicorn chgvis.wsgi:application -c /path/to/deploy/gunicorn_cfg.py
+---------------------------------------------
+
+3. Start nginx with (or use reload command on line 360):
+---------------------------------------------
+sudo nginx
+---------------------------------------------
+
+4. Go to https://localhost/vis/
+(Chrome will give the "site insecure" warning because the ssl key hasn't been certified - ignore by going to "advanced -> proceed to localhost")
+
+
+
+
+0.(Install xcode command line tools if not already done)
+1. Install homebrew package manager
+	-install pip using sudo easy_install pip (doublecheck that)
+2. Using homebrew, install NGINX
+	- pip install -r requirements/production.txt
+3. Make ssl keys 
+4. Configure NGINX (Tricky step) 
+	- Make some folders to use in the configuration file
+	- Set up the configuration file
+	- run NGINX and test
+5. Activate the virtual environment
+6. Run using gunicorn
+

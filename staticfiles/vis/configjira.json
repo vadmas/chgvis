@@ -1,0 +1,10 @@
+{
+	"data": "static/vis/data.json",
+	"dateFormat":"%Y-%m-%d %H:%M:%S",
+  	"width":1100,	
+  	"mainHeight":550,	
+   	"miniHeight":70,	
+    "spacing":50,	
+	"padding":0.35,
+	"types":["Epic", "New Feature", "Story", "Task", "Sub-task", "Bug", "Improvement"]
+}

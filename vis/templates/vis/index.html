@@ -1,0 +1,32 @@
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+      
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> 
+
+        {% crispy form %}
+        <script type="text/javascript">
+         $(function() {
+          $( ".datepicker" ).datepicker({
+          changeMonth: true,
+          changeYear: true,
+          yearRange: "1900:2015",
+          // You can put more options here.
+             });
+          });
+
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

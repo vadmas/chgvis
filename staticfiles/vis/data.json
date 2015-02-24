@@ -1,0 +1,1062 @@
+[
+    {
+        "startdate": "2014-08-21 12:43:48", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Search should take in username, password, URI", 
+        "link": [], 
+        "enddate": "2014-08-26 16:12:26", 
+        "type": "Bug", 
+        "id": "CHGVIZ-113"
+    }, 
+    {
+        "startdate": "2014-08-20 15:05:36", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Selected element view for new timeline", 
+        "link": [], 
+        "enddate": "2014-08-21 12:43:07", 
+        "type": "Task", 
+        "id": "CHGVIZ-112"
+    }, 
+    {
+        "startdate": "2014-08-13 12:47:03", 
+        "subtitle": "Enoch Choi", 
+        "description": "URL for moving from CSV to JSON on D3.js:\r\nhttp://stackoverflow.com/questions/10076940/d3-reading-json-data-instead-of-csv-file\r\n", 
+        "title": "Modify index.html to accept JSON response and not CSV (or make a new file)", 
+        "link": [], 
+        "enddate": "2014-08-20 11:49:33", 
+        "type": "Task", 
+        "id": "CHGVIZ-111"
+    }, 
+    {
+        "startdate": "2014-08-13 12:45:14", 
+        "subtitle": "Enoch Choi", 
+        "description": "The paths for the URL should be provided by the Play framework used by the Java Web Service.", 
+        "title": "Make AJAX call to the Java Web Service", 
+        "link": [], 
+        "enddate": "2014-08-19 16:49:28", 
+        "type": "Task", 
+        "id": "CHGVIZ-110"
+    }, 
+    {
+        "startdate": "2014-08-13 12:43:34", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Integrate the Java Web Service (that makes requests to Jira) into the TimelineViz", 
+        "link": [], 
+        "enddate": "2014-08-26 16:12:44", 
+        "type": "Epic", 
+        "id": "CHGVIZ-109"
+    }, 
+    {
+        "startdate": "2014-08-13 12:41:42", 
+        "subtitle": "Enoch Choi", 
+        "description": "JSON -> Java Object -> Modify -> JSON\r\nThen return JSON to script that called it.", 
+        "title": "Modifying information received from Jira", 
+        "link": [], 
+        "enddate": "2014-08-18 14:02:30", 
+        "type": "Task", 
+        "id": "CHGVIZ-108"
+    }, 
+    {
+        "startdate": "2014-08-13 12:40:07", 
+        "subtitle": "Enoch Choi", 
+        "description": "This includes:\r\n- Making Jira client\r\n- Making query\r\n- Sending it to Jira Server", 
+        "title": "Creating request to Jira", 
+        "link": [], 
+        "enddate": "2014-08-18 14:02:25", 
+        "type": "Task", 
+        "id": "CHGVIZ-107"
+    }, 
+    {
+        "startdate": "2014-08-13 12:37:09", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create Java web service that the timeline script will call", 
+        "link": [], 
+        "enddate": "2014-08-26 16:12:47", 
+        "type": "Epic", 
+        "id": "CHGVIZ-106"
+    }, 
+    {
+        "startdate": "2014-08-08 10:57:38", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "The javascript file for the visualization should be able to query straight to the JIRA database or invoke a Java program to query.", 
+        "link": [], 
+        "enddate": "2014-08-13 12:47:22", 
+        "type": "Epic", 
+        "id": "CHGVIZ-104"
+    }, 
+    {
+        "startdate": "2014-08-06 17:13:23", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Include author in comment description", 
+        "link": [], 
+        "enddate": "2014-08-08 10:00:56", 
+        "type": "Task", 
+        "id": "CHGVIZ-103"
+    }, 
+    {
+        "startdate": "2014-08-06 17:09:00", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Exclude comments from naviband(allview)", 
+        "link": [], 
+        "enddate": "2014-08-08 09:07:49", 
+        "type": "Task", 
+        "id": "CHGVIZ-102"
+    }, 
+    {
+        "startdate": "2014-08-06 17:08:39", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Exclude comments from Main view", 
+        "link": [], 
+        "enddate": "2014-08-07 12:25:43", 
+        "type": "Task", 
+        "id": "CHGVIZ-101"
+    }, 
+    {
+        "startdate": "2014-08-05 15:28:59", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create filter for comment view", 
+        "link": [], 
+        "enddate": "2014-08-06 17:08:07", 
+        "type": "Task", 
+        "id": "CHGVIZ-100"
+    }, 
+    {
+        "startdate": "2014-08-05 12:19:26", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create Comment class", 
+        "link": [], 
+        "enddate": "2014-08-05 16:00:55", 
+        "type": "Task", 
+        "id": "CHGVIZ-99"
+    }, 
+    {
+        "startdate": "2014-08-05 12:19:05", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Display comments in visualization", 
+        "link": [], 
+        "enddate": "2014-08-13 12:37:17", 
+        "type": "Epic", 
+        "id": "CHGVIZ-98"
+    }, 
+    {
+        "startdate": "2014-08-01 11:17:44", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "When in view of selected element and zooming in, the interval labels disappear", 
+        "link": [], 
+        "enddate": "2014-08-01 11:40:22", 
+        "type": "Bug", 
+        "id": "CHGVIZ-97"
+    }, 
+    {
+        "startdate": "2014-07-31 14:59:37", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "clean code", 
+        "link": [], 
+        "enddate": "2014-08-05 11:05:22", 
+        "type": "Task", 
+        "id": "CHGVIZ-96"
+    }, 
+    {
+        "startdate": "2014-07-31 11:56:07", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Detail of elements(keywords) should also be shown on interval", 
+        "link": [], 
+        "enddate": "2014-07-31 13:03:15", 
+        "type": "Bug", 
+        "id": "CHGVIZ-95"
+    }, 
+    {
+        "startdate": "2014-07-30 14:49:36", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Filter for selected element view includes substrings", 
+        "link": [], 
+        "enddate": "2014-07-31 10:14:02", 
+        "type": "Bug", 
+        "id": "CHGVIZ-94"
+    }, 
+    {
+        "startdate": "2014-07-30 14:35:02", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Element view should include keywords", 
+        "link": [], 
+        "enddate": "2014-07-30 14:35:10", 
+        "type": "Bug", 
+        "id": "CHGVIZ-93"
+    }, 
+    {
+        "startdate": "2014-07-30 12:24:37", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Keyword not mentioned is included in timeline", 
+        "link": [], 
+        "enddate": "2014-07-30 12:39:15", 
+        "type": "Bug", 
+        "id": "CHGVIZ-92"
+    }, 
+    {
+        "startdate": "2014-07-29 16:42:16", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Scaling for lines between elements", 
+        "link": [], 
+        "enddate": "2014-07-29 16:42:26", 
+        "type": "Task", 
+        "id": "CHGVIZ-91"
+    }, 
+    {
+        "startdate": "2014-07-28 16:17:54", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Interval labels should appear when zooming in", 
+        "link": [], 
+        "enddate": "2014-07-29 16:41:35", 
+        "type": "Task", 
+        "id": "CHGVIZ-90"
+    }, 
+    {
+        "startdate": "2014-07-28 10:52:19", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "The pan lags", 
+        "link": [], 
+        "enddate": "2014-07-28 16:17:22", 
+        "type": "Bug", 
+        "id": "CHGVIZ-89"
+    }, 
+    {
+        "startdate": "2014-07-24 14:55:05", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Make a query for specific sprint", 
+        "link": [], 
+        "enddate": "2014-07-25 11:30:46", 
+        "type": "Task", 
+        "id": "CHGVIZ-88"
+    }, 
+    {
+        "startdate": "2014-07-24 14:54:44", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Brush shows all elements when in specific view", 
+        "link": [], 
+        "enddate": "2014-07-25 12:29:20", 
+        "type": "Bug", 
+        "id": "CHGVIZ-87"
+    }, 
+    {
+        "startdate": "2014-07-24 14:53:15", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Fix 'undefined 4' rele", 
+        "link": [], 
+        "enddate": "2014-07-25 10:59:00", 
+        "type": "Bug", 
+        "id": "CHGVIZ-86"
+    }, 
+    {
+        "startdate": "2014-07-24 11:54:39", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Search", 
+        "link": [], 
+        "enddate": "2014-07-24 12:05:38", 
+        "type": "Bug", 
+        "id": "CHGVIZ-85"
+    }, 
+    {
+        "startdate": "2014-07-18 14:03:48", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Line for below brush still not placed well", 
+        "link": [], 
+        "enddate": "2014-07-22 16:11:52", 
+        "type": "Bug", 
+        "id": "CHGVIZ-84"
+    }, 
+    {
+        "startdate": "2014-07-16 16:15:24", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Rework start of line for bands under the brush", 
+        "link": [], 
+        "enddate": "2014-07-17 15:18:10", 
+        "type": "Bug", 
+        "id": "CHGVIZ-83"
+    }, 
+    {
+        "startdate": "2014-07-14 11:01:42", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a programmer, I want to write the keywords as row in the outputted CSV file.", 
+        "link": [], 
+        "enddate": "2014-07-15 10:46:18", 
+        "type": "Story", 
+        "id": "CHGVIZ-82"
+    }, 
+    {
+        "startdate": "2014-07-14 11:00:55", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a programmer, I want to find the start and end dates of when a keyword was mentionned", 
+        "link": [], 
+        "enddate": "2014-07-14 16:00:00", 
+        "type": "Story", 
+        "id": "CHGVIZ-81"
+    }, 
+    {
+        "startdate": "2014-07-14 10:58:27", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a programmer, I want to parse a csv file of keywords.", 
+        "link": [], 
+        "enddate": "2014-07-14 14:11:44", 
+        "type": "Story", 
+        "id": "CHGVIZ-80"
+    }, 
+    {
+        "startdate": "2014-07-14 10:54:45", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Keywords must be included in timeline", 
+        "link": [], 
+        "enddate": "2014-08-13 12:37:21", 
+        "type": "Epic", 
+        "id": "CHGVIZ-79"
+    }, 
+    {
+        "startdate": "2014-07-14 10:47:06", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Must match csv file of 6 months data with timeline", 
+        "link": [], 
+        "enddate": "2014-07-16 15:11:12", 
+        "type": "Task", 
+        "id": "CHGVIZ-78"
+    }, 
+    {
+        "startdate": "2014-07-14 10:42:01", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Lines should not overlap", 
+        "link": [], 
+        "enddate": "2014-07-17 15:18:06", 
+        "type": "Bug", 
+        "id": "CHGVIZ-77"
+    }, 
+    {
+        "startdate": "2014-07-11 13:23:59", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Only a single related element is marked when there are more related elements", 
+        "link": [], 
+        "enddate": "2014-07-14 10:41:42", 
+        "type": "Bug", 
+        "id": "CHGVIZ-76"
+    }, 
+    {
+        "startdate": "2014-07-11 11:41:35", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Return link type in CSV file", 
+        "link": [], 
+        "enddate": "2014-07-18 13:38:50", 
+        "type": "Task", 
+        "id": "CHGVIZ-75"
+    }, 
+    {
+        "startdate": "2014-07-10 15:07:27", 
+        "subtitle": "Enoch Choi", 
+        "description": "Everything from February to today.", 
+        "title": "Create CSV file with 6 months long data from JIRA site and send to Marc", 
+        "link": [], 
+        "enddate": "2014-07-11 11:41:07", 
+        "type": "Task", 
+        "id": "CHGVIZ-74"
+    }, 
+    {
+        "startdate": "2014-07-09 12:29:55", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Extract comments also from issues to CSV", 
+        "link": [], 
+        "enddate": "2014-07-24 15:39:33", 
+        "type": "Task", 
+        "id": "CHGVIZ-72"
+    }, 
+    {
+        "startdate": "2014-07-09 12:19:51", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Modify filter accordingly to the related elements", 
+        "link": [], 
+        "enddate": "2014-07-24 11:54:20", 
+        "type": "Task", 
+        "id": "CHGVIZ-71"
+    }, 
+    {
+        "startdate": "2014-07-09 12:18:19", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Lines should show directions if an element as a sub-component of the other element.", 
+        "link": [], 
+        "enddate": "2014-07-23 16:21:41", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-69"
+    }, 
+    {
+        "startdate": "2014-07-09 12:17:29", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "If an issue status is still open, it should have today's date as end date", 
+        "link": [], 
+        "enddate": "2014-07-25 08:57:51", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-68"
+    }, 
+    {
+        "startdate": "2014-07-09 12:16:51", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to see the timespan of the important keywords as mentionned in the description of issues.", 
+        "link": [], 
+        "enddate": "2014-07-16 15:36:32", 
+        "type": "Story", 
+        "id": "CHGVIZ-67"
+    }, 
+    {
+        "startdate": "2014-07-09 10:02:49", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Made circle animation", 
+        "link": [], 
+        "enddate": "2014-07-09 10:03:00", 
+        "type": "Task", 
+        "id": "CHGVIZ-66"
+    }, 
+    {
+        "startdate": "2014-07-07 09:22:24", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Add additional fields of values extracted from JIRA/Comment it out", 
+        "link": [], 
+        "enddate": "2014-07-07 16:52:30", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-65"
+    }, 
+    {
+        "startdate": "2014-07-04 15:40:03", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Allow dbl click feature for instances", 
+        "link": [], 
+        "enddate": "2014-07-04 16:05:21", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-64"
+    }, 
+    {
+        "startdate": "2014-07-04 15:36:41", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Modify color of instances", 
+        "link": [], 
+        "enddate": "2014-07-04 15:39:45", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-63"
+    }, 
+    {
+        "startdate": "2014-07-04 12:42:09", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Interval does not appear when start date and end date are the same", 
+        "link": [], 
+        "enddate": "2014-07-04 13:56:35", 
+        "type": "Bug", 
+        "id": "CHGVIZ-62"
+    }, 
+    {
+        "startdate": "2014-07-03 17:44:08", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create new file to accept jira issue types", 
+        "link": [], 
+        "enddate": "2014-07-04 16:05:26", 
+        "type": "Task", 
+        "id": "CHGVIZ-61"
+    }, 
+    {
+        "startdate": "2014-07-03 16:36:00", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Give priority level to elements/elements with more priority are closer to timeline", 
+        "link": [], 
+        "enddate": "2014-07-08 12:19:59", 
+        "type": "Task", 
+        "id": "CHGVIZ-60"
+    }, 
+    {
+        "startdate": "2014-07-03 11:24:56", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Modify code to redirect using id and not labels", 
+        "link": [], 
+        "enddate": "2014-07-03 16:46:29", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-59"
+    }, 
+    {
+        "startdate": "2014-07-02 16:40:46", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to be able to click the brush and zoom into the time span selected.", 
+        "link": [], 
+        "enddate": "2014-07-28 10:52:56", 
+        "type": "Story", 
+        "id": "CHGVIZ-58"
+    }, 
+    {
+        "startdate": "2014-07-02 16:39:09", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Generalize related EACRs to related elements (using identifiers)", 
+        "link": [], 
+        "enddate": "2014-07-04 17:48:31", 
+        "type": "Task", 
+        "id": "CHGVIZ-56"
+    }, 
+    {
+        "startdate": "2014-07-02 16:32:04", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a programmer, I want to display lines connecting an element to another.", 
+        "link": [], 
+        "enddate": "2014-07-11 13:24:10", 
+        "type": "Story", 
+        "id": "CHGVIZ-55"
+    }, 
+    {
+        "startdate": "2014-07-02 16:30:13", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Add unique identifier to each element", 
+        "link": [], 
+        "enddate": "2014-07-03 11:24:25", 
+        "type": "Task", 
+        "id": "CHGVIZ-54"
+    }, 
+    {
+        "startdate": "2014-06-27 11:01:48", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Clean up code", 
+        "link": [], 
+        "enddate": "2014-06-27 17:25:26", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-52"
+    }, 
+    {
+        "startdate": "2014-06-26 16:54:43", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Keywords with long timespan give weird view. Investigate filter for duplicate filtering.", 
+        "link": [], 
+        "enddate": "2014-06-27 11:01:27", 
+        "type": "Bug", 
+        "id": "CHGVIZ-51"
+    }, 
+    {
+        "startdate": "2014-06-26 11:52:51", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Add code term to types", 
+        "link": [], 
+        "enddate": "2014-06-30 10:25:50", 
+        "type": "Task", 
+        "id": "CHGVIZ-50"
+    }, 
+    {
+        "startdate": "2014-06-26 11:43:40", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create filter for keyword view", 
+        "link": [], 
+        "enddate": "2014-06-26 16:02:13", 
+        "type": "Task", 
+        "id": "CHGVIZ-49"
+    }, 
+    {
+        "startdate": "2014-06-25 10:43:57", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "When overview for other elements, show components of related EACR", 
+        "link": [], 
+        "enddate": "2014-06-26 11:53:13", 
+        "type": "Task", 
+        "id": "CHGVIZ-48"
+    }, 
+    {
+        "startdate": "2014-06-25 10:38:13", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Create filter for elements related to EACR", 
+        "link": [], 
+        "enddate": "2014-06-25 17:04:17", 
+        "type": "Task", 
+        "id": "CHGVIZ-47"
+    }, 
+    {
+        "startdate": "2014-06-24 17:08:47", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Elements of CSV must be related, either by mention in description or list of related elements.", 
+        "link": [], 
+        "enddate": "2014-06-25 17:03:59", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-45"
+    }, 
+    {
+        "startdate": "2014-06-24 16:14:27", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Brush label tooltip positioning", 
+        "link": [], 
+        "enddate": "2014-06-24 16:54:22", 
+        "type": "Bug", 
+        "id": "CHGVIZ-43"
+    }, 
+    {
+        "startdate": "2014-06-24 11:13:10", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "End of timeline for timespan of several years", 
+        "link": [], 
+        "enddate": "2014-06-24 11:45:54", 
+        "type": "Bug", 
+        "id": "CHGVIZ-42"
+    }, 
+    {
+        "startdate": "2014-06-23 18:07:11", 
+        "subtitle": "Enoch Choi", 
+        "description": "Number of char + timespan -> height of band, how many lines to use (breaks)", 
+        "title": "Modify font size of label for long text.", 
+        "link": [], 
+        "enddate": "2014-06-24 15:05:11", 
+        "type": "Bug", 
+        "id": "CHGVIZ-41"
+    }, 
+    {
+        "startdate": "2014-06-23 17:51:39", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to view only related components of a selected EACR", 
+        "link": [], 
+        "enddate": "2014-06-26 10:48:30", 
+        "type": "Epic", 
+        "id": "CHGVIZ-40"
+    }, 
+    {
+        "startdate": "2014-06-23 16:52:03", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Make new csv file to display 3rd example of document", 
+        "link": [], 
+        "enddate": "2014-06-24 11:11:05", 
+        "type": "Task", 
+        "id": "CHGVIZ-39"
+    }, 
+    {
+        "startdate": "2014-06-23 12:54:29", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Overview includes other elements of same name", 
+        "link": [], 
+        "enddate": "2014-06-23 13:02:38", 
+        "type": "Bug", 
+        "id": "CHGVIZ-38"
+    }, 
+    {
+        "startdate": "2014-06-23 11:45:26", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Modify location of labels when viewing specific element", 
+        "link": [], 
+        "enddate": "2014-06-30 14:45:30", 
+        "type": "Bug", 
+        "id": "CHGVIZ-37"
+    }, 
+    {
+        "startdate": "2014-06-23 10:33:23", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Overview button does not work anymore", 
+        "link": [], 
+        "enddate": "2014-06-23 10:36:27", 
+        "type": "Bug", 
+        "id": "CHGVIZ-36"
+    }, 
+    {
+        "startdate": "2014-06-23 10:11:14", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "IP adress identification", 
+        "link": [], 
+        "enddate": "2014-06-23 10:33:06", 
+        "type": "Bug", 
+        "id": "CHGVIZ-35"
+    }, 
+    {
+        "startdate": "2014-06-20 17:45:43", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to be able to search for elements.", 
+        "link": [], 
+        "enddate": "2014-06-23 16:48:41", 
+        "type": "Story", 
+        "id": "CHGVIZ-34"
+    }, 
+    {
+        "startdate": "2014-06-20 15:21:27", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Dynamically change height of chart according to height of each band", 
+        "link": [], 
+        "enddate": "2014-06-24 12:08:58", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-33"
+    }, 
+    {
+        "startdate": "2014-06-19 14:11:23", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to be able to view a timeline centered around a keyword.", 
+        "link": [], 
+        "enddate": "2014-06-23 17:51:45", 
+        "type": "Epic", 
+        "id": "CHGVIZ-32"
+    }, 
+    {
+        "startdate": "2014-06-19 14:09:46", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to be able to specify which EACR to center my timeline around.", 
+        "link": [], 
+        "enddate": "2014-06-19 18:20:11", 
+        "type": "Story", 
+        "id": "CHGVIZ-31"
+    }, 
+    {
+        "startdate": "2014-06-19 14:08:11", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to be able to double click an element for an overview.", 
+        "link": [], 
+        "enddate": "2014-06-20 17:40:49", 
+        "type": "Story", 
+        "id": "CHGVIZ-30"
+    }, 
+    {
+        "startdate": "2014-06-19 12:16:46", 
+        "subtitle": "Enoch Choi", 
+        "description": "Make it possible to specify start and end date.", 
+        "title": "As a user, I want to view the timeline span from the beginning to the end of an EACR.", 
+        "link": [], 
+        "enddate": "2014-06-20 11:23:10", 
+        "type": "Bug", 
+        "id": "CHGVIZ-29"
+    }, 
+    {
+        "startdate": "2014-06-18 18:37:14", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Interval labels position", 
+        "link": [], 
+        "enddate": "2014-06-19 11:05:04", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-28"
+    }, 
+    {
+        "startdate": "2014-06-18 16:20:15", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "change size of intervals according to number of tracks", 
+        "link": [], 
+        "enddate": "2014-06-18 18:36:43", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-27"
+    }, 
+    {
+        "startdate": "2014-06-17 13:22:13", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "EACR description shown when mouse over", 
+        "link": [], 
+        "enddate": "2014-06-17 17:49:10", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-26"
+    }, 
+    {
+        "startdate": "2014-06-17 11:43:16", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Name of EACR on timeline x-axis", 
+        "link": [], 
+        "enddate": "2014-06-17 12:23:31", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-25"
+    }, 
+    {
+        "startdate": "2014-06-17 10:30:24", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Rectangles should be placed next to each other rather than only vertically", 
+        "link": [], 
+        "enddate": "2014-06-18 16:08:51", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-24"
+    }, 
+    {
+        "startdate": "2014-06-17 10:29:05", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Change background color of x-axis", 
+        "link": [], 
+        "enddate": "2014-06-17 11:42:39", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-23"
+    }, 
+    {
+        "startdate": "2014-06-17 10:25:32", 
+        "subtitle": "Enoch Choi", 
+        "description": "- CSV should accept description field.\n- Description shown through mouseover.", 
+        "title": "As a user, I want to see the description of a EACR.", 
+        "link": [], 
+        "enddate": "2014-06-17 11:00:43", 
+        "type": "Story", 
+        "id": "CHGVIZ-22"
+    }, 
+    {
+        "startdate": "2014-06-11 17:41:56", 
+        "subtitle": "Enoch Choi", 
+        "description": "- Make changes in visualization tool to be compatible with jira data.", 
+        "title": "As a programmer, I want to be able to use the CSV produced by JiraToCSV in the visualization tool", 
+        "link": [], 
+        "enddate": "2014-07-03 17:46:21", 
+        "type": "Story", 
+        "id": "CHGVIZ-21"
+    }, 
+    {
+        "startdate": "2014-06-11 15:52:43", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want the creation date and resolved date of issues in the csv file.", 
+        "link": [], 
+        "enddate": "2014-06-11 17:39:30", 
+        "type": "Story", 
+        "id": "CHGVIZ-20"
+    }, 
+    {
+        "startdate": "2014-06-11 10:41:41", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want the extracted data in a csv file.", 
+        "link": [], 
+        "enddate": "2014-06-11 15:52:58", 
+        "type": "Story", 
+        "id": "CHGVIZ-19"
+    }, 
+    {
+        "startdate": "2014-06-11 10:41:05", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want the user stories from an open source website", 
+        "link": [], 
+        "enddate": "2014-06-11 12:27:22", 
+        "type": "Story", 
+        "id": "CHGVIZ-18"
+    }, 
+    {
+        "startdate": "2014-06-10 11:16:37", 
+        "subtitle": "Enoch Choi", 
+        "description": "- connect open source\r\n- extract data (epics, user stories)\r\n- Querying XML file\r\n- Does not need to be done real-time", 
+        "title": "Research on data extraction from open source", 
+        "link": [], 
+        "enddate": "2014-06-11 12:27:10", 
+        "type": "Task", 
+        "id": "CHGVIZ-17"
+    }, 
+    {
+        "startdate": "2014-06-09 17:47:28", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Get rid of blank space between types", 
+        "link": [], 
+        "enddate": "2014-06-10 11:08:53", 
+        "type": "Bug", 
+        "id": "CHGVIZ-16"
+    }, 
+    {
+        "startdate": "2014-06-09 10:25:01", 
+        "subtitle": "Enoch Choi", 
+        "description": "- Must be able to extract data from connect open source.\r\n- The data will consist of epics, user stories, ...\r\n- It can be real-time or just querying to create an xml file...", 
+        "title": "As a user, I want the ability to extract data from an open source", 
+        "link": [], 
+        "enddate": "2014-06-17 10:25:39", 
+        "type": "Epic", 
+        "id": "CHGVIZ-15"
+    }, 
+    {
+        "startdate": "2014-06-09 10:19:48", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Separate bands above and below the x-axis", 
+        "link": [], 
+        "enddate": "2014-06-09 17:46:46", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-14"
+    }, 
+    {
+        "startdate": "2014-06-06 12:41:08", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Different type on same row", 
+        "link": [], 
+        "enddate": "2014-06-09 17:47:06", 
+        "type": "Bug", 
+        "id": "CHGVIZ-13"
+    }, 
+    {
+        "startdate": "2014-06-06 10:38:38", 
+        "subtitle": "Enoch Choi", 
+        "description": "Include the day of the month as well", 
+        "title": "MouseOver labels should display start date and end date", 
+        "link": [], 
+        "enddate": "2014-06-06 12:34:37", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-12"
+    }, 
+    {
+        "startdate": "2014-06-06 10:36:49", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Label for last intervals cut off", 
+        "link": [], 
+        "enddate": "2014-06-10 11:17:21", 
+        "type": "Bug", 
+        "id": "CHGVIZ-11"
+    }, 
+    {
+        "startdate": "2014-06-05 15:28:23", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Bugs with only start date should be color coded according to bug number", 
+        "link": [], 
+        "enddate": "2014-06-05 15:32:28", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-10"
+    }, 
+    {
+        "startdate": "2014-06-05 15:26:25", 
+        "subtitle": "Enoch Choi", 
+        "description": "Need to reduce number of ticks and/or display month/day as well.", 
+        "title": "When chart is over a short time span, the ticks show the same years repeatedly.", 
+        "link": [], 
+        "enddate": "2014-06-05 15:31:20", 
+        "type": "Bug", 
+        "id": "CHGVIZ-9"
+    }, 
+    {
+        "startdate": "2014-06-05 15:24:19", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "The latest bugs in timeline are cut off", 
+        "link": [], 
+        "enddate": "2014-06-05 15:31:36", 
+        "type": "Bug", 
+        "id": "CHGVIZ-8"
+    }, 
+    {
+        "startdate": "2014-06-05 15:21:43", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "As a user, I want to able to view the bugs displayed over a timeline", 
+        "link": [], 
+        "enddate": "2014-06-05 15:30:49", 
+        "type": "Story", 
+        "id": "CHGVIZ-7"
+    }, 
+    {
+        "startdate": "2014-06-05 15:13:17", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Styling to make it look like visualization draft", 
+        "link": [], 
+        "enddate": "2014-06-19 15:32:40", 
+        "type": "Improvement", 
+        "id": "CHGVIZ-6"
+    }, 
+    {
+        "startdate": "2014-06-05 15:09:47", 
+        "subtitle": "Enoch Choi", 
+        "description": "Not part of timeline. Possibly mouseOver functionality.\r\nDescription could include owner.", 
+        "title": "As a user, I want to be able to view the description of the EACR.", 
+        "link": [], 
+        "enddate": "2014-06-17 11:00:29", 
+        "type": "Story", 
+        "id": "CHGVIZ-5"
+    }, 
+    {
+        "startdate": "2014-06-05 15:06:13", 
+        "subtitle": "Enoch Choi", 
+        "description": "- Items in CSV data file will need to accept one more parameter for specifying type\n- Clean code to accept 4th parameter\n- Make array of types \n- Modify interval color according to which type it corresponds to\n\n***This will also help for vertical categorizing\n", 
+        "title": "As a user, I want to distinguish the types of data with color codes.", 
+        "link": [], 
+        "enddate": "2014-06-06 10:30:19", 
+        "type": "Story", 
+        "id": "CHGVIZ-4"
+    }, 
+    {
+        "startdate": "2014-06-05 14:59:08", 
+        "subtitle": "Enoch Choi", 
+        "description": "Example:\r\nFirst row: EACR\r\nSecond row: ring\r\nThird row: keyword", 
+        "title": "As a user, I want to be able to view data categorized in vertical order.", 
+        "link": [], 
+        "enddate": "2014-06-06 11:47:06", 
+        "type": "Story", 
+        "id": "CHGVIZ-3"
+    }, 
+    {
+        "startdate": "2014-06-05 14:56:30", 
+        "subtitle": "Enoch Choi", 
+        "description": "Need to expand bugs horizontally.\r\nThis is required for bugs that have both a start and an end date", 
+        "title": "As a user, I want to be able to view the timespan of bugs. ", 
+        "link": [], 
+        "enddate": "2014-06-05 16:38:40", 
+        "type": "Story", 
+        "id": "CHGVIZ-2"
+    }, 
+    {
+        "startdate": "2014-06-02 14:07:52", 
+        "subtitle": "Enoch Choi", 
+        "description": "", 
+        "title": "Develop a timeline visualization of simple data (date, bug number)", 
+        "link": [], 
+        "enddate": "2014-06-10 11:13:13", 
+        "type": "Epic", 
+        "id": "CHGVIZ-1"
+    }
+]

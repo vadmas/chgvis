@@ -1,0 +1,36 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Retrospective</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'vis/_/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'vis/style.css' %}">
+
+</head>
+<body>
+	<div class="container" style="height:1100px"> 
+		<div class="timeline">
+			<section id="chart"></section>
+		</div>
+		<div class="details">
+			<div id="collapse" style="display:none;" callerid=''></div>
+		</div>
+	</div>
+
+	<script type= "text/javascript" src="{% static 'vis/_/d3.js' %}"></script>
+	<script type= "text/javascript" src="{% static 'vis/_/jquery.js' %}"></script>
+	<script type= "text/javascript" src="{% static 'vis/timeline.js' %}"></script>
+	<script>
+	var json_data = {{ data| safe }}
+	
+	d3.json("{% static 'vis/configjira.json' %}", function(error, config) {
+	 		if (json_data.length === 0){
+	 			$('.container').text("No data returned");
+	 	}
+	 	else vis.init(config,json_data);		
+	});
+		
+		
+	 </script>
+</body>
+</html>
